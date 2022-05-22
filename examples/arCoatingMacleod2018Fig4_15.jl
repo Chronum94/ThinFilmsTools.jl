@@ -40,7 +40,7 @@ plot(Spectrum1D(),
      yaxis=("Reflectance"),
 );
 plot!(Spectrum1D(),
-      sol2.beam.λ, sol2.Spectra.Rs,
+      sol2.Beam.λ, sol2.Spectra.Rs,
       label=L"Y$_2$O$_3$",
       line=(:dashdot),
 );

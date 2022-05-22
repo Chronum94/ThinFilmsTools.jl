@@ -24,17 +24,17 @@ sol = main()
 
 # Plot spectra
 plot(Spectrum1D(),
-    sol.beam.λ, [sol.Spectra.Rp, sol.Spectra.Tp, 1.0.-(sol.Spectra.Rp.+sol.Spectra.Tp)],
+    sol.Beam.λ, [sol.Spectra.Rp, sol.Spectra.Tp, 1.0.-(sol.Spectra.Rp.+sol.Spectra.Tp)],
     label=["Reflectance" "Transmittance" "Absorbance"],
     line=([:solid :dash :dashdot]),
     ylims=(0.0,1.0),
-    xlims=(sol.beam.λ[1], sol.beam.λ[end]),
+    xlims=(sol.Beam.λ[1], sol.Beam.λ[end]),
 );
 gui()
 
 # Plot the EMF pattern for normal incidence
 plot(EMF2D(),
-    sol.beam.λ, sol.Misc.ℓ, log10.(sol.Field.emfp[:,1,:]),
+    sol.Beam.λ, sol.Misc.ℓ, log10.(sol.Field.emfp[:,1,:]),
     title=("Log of EMF intensity"),
 );
 gui()

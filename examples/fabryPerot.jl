@@ -30,15 +30,15 @@ sol = main()
 
 # plot the R, T and A spectra
 plot(Spectrum1D(),
-    sol.beam.λ, [sol.Spectra.Rp, sol.Spectra.Tp, 1.0.-(sol.Spectra.Rp.+sol.Spectra.Tp)],
+    sol.Beam.λ, [sol.Spectra.Rp, sol.Spectra.Tp, 1.0.-(sol.Spectra.Rp.+sol.Spectra.Tp)],
     label=["Reflectance" "Transmittance" "Absorbance"],
     line=([:solid :dash :dashdot]),
-    xlims=(sol.beam.λ[1], sol.Beam.λ[end]),
+    xlims=(sol.Beam.λ[1], sol.Beam.λ[end]),
     yaxis=("Transmittance", (0.,1.0)),
 )
 gui()
 
-plot(EMF2D(), sol.beam.λ, sol.Misc.ℓ, sol.Field.emfp[:,1,:])
+plot(EMF2D(), sol.Beam.λ, sol.Misc.ℓ, sol.Field.emfp[:,1,:])
 gui()
 
 # plot the refractive index profile

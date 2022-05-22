@@ -53,7 +53,7 @@ plot(SpaceSolution(),
     yaxis="Porosity"; num_levels=50)
 gui()
 plot(FitSpectrum(),
-    sol.beam.λ, sol.spectrumExp, sol.spectrumFit,
+    sol.Beam.λ, sol.spectrumExp, sol.spectrumFit,
     xaxis="Wavelength [nm]",
     yaxis="Reflectance",
 )
